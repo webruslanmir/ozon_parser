@@ -107,7 +107,7 @@ class OzonSellerParse:
                     div_element = self.page.query_selector('div[data-widget="modalLayout"]')
                     soup = BeautifulSoup(div_element.inner_html(), 'html.parser')
                     target_list = soup.find_all('span', class_='tsBody400Small')
-                     res = target_list[1].get_text('!!').split('!!')  #  IndexError: list index out of range
+                    res = target_list[1].get_text('!!').split('!!')    # IndexError: list index out of range
                     print(res)
 
 
